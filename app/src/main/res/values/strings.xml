@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kelompok</string>
+    <string name="trend">trend yang sering kamu ikuti:</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="technology">technology</string>
+    <string name="education">education</string>
+    <string name="sosial">sosial</string>
+    <string name="budaya">budaya</string>
+    <string name="kekinian">kekinian</string>
+    <string name="close">close</string>
+</resources>

@@ -1,0 +1,187 @@
+Index: Kelompok/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/.idea/vcs.xml b/Kelompok/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1630848017425)
++++ b/Kelompok/.idea/vcs.xml	(date 1630848017425)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: Kelompok/app/src/main/java/com/ppb/kelompok/MainActivity2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/app/src/main/java/com/ppb/kelompok/MainActivity2.java b/Kelompok/app/src/main/java/com/ppb/kelompok/MainActivity2.java
+new file mode 100644
+--- /dev/null	(date 1631088826985)
++++ b/Kelompok/app/src/main/java/com/ppb/kelompok/MainActivity2.java	(date 1631088826985)
+@@ -0,0 +1,23 @@
++package com.ppb.kelompok;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++import android.webkit.WebSettings;
++import android.webkit.WebView;
++import android.webkit.WebViewClient;
++
++public class MainActivity2 extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main2);
++
++        WebView webView = findViewById(R.id.web);
++        webView.setWebViewClient(new WebViewClient());
++        webView.loadUrl("https://www.google.com");
++        WebSettings settings = webView.getSettings();
++        settings.setJavaScriptEnabled(true);
++    }
++}
+\ No newline at end of file
+Index: Kelompok/app/src/main/res/layout/activity_main2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/app/src/main/res/layout/activity_main2.xml b/Kelompok/app/src/main/res/layout/activity_main2.xml
+new file mode 100644
+--- /dev/null	(date 1631088441483)
++++ b/Kelompok/app/src/main/res/layout/activity_main2.xml	(date 1631088441483)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity2">
++
++    <WebView
++        android:id="@+id/web"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:layout_centerInParent="true"/>
++
++</RelativeLayout>
+\ No newline at end of file
+Index: .idea/kelompokppb1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/kelompokppb1.iml b/.idea/kelompokppb1.iml
+new file mode 100644
+--- /dev/null	(date 1630847852920)
++++ b/.idea/kelompokppb1.iml	(date 1630847852920)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Kelompok/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/.idea/gradle.xml b/Kelompok/.idea/gradle.xml
+--- a/Kelompok/.idea/gradle.xml	(revision d088581911821a9e22246e9ede897e3c38408100)
++++ b/Kelompok/.idea/gradle.xml	(date 1630848010945)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: Kelompok/app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/app/src/main/AndroidManifest.xml b/Kelompok/app/src/main/AndroidManifest.xml
+--- a/Kelompok/app/src/main/AndroidManifest.xml	(revision d088581911821a9e22246e9ede897e3c38408100)
++++ b/Kelompok/app/src/main/AndroidManifest.xml	(date 1631088913918)
+@@ -2,6 +2,7 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.ppb.kelompok">
+ 
++    <uses-permission android:name="android.permission.INTERNET"/>
+     <application
+         android:allowBackup="true"
+         android:icon="@mipmap/ic_launcher"
+@@ -9,6 +10,9 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/Theme.Kelompok">
++        <activity
++            android:name=".MainActivity2"
++            android:exported="true" />
+         <activity
+             android:name=".MainActivity"
+             android:exported="true">
+Index: Kelompok/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/.idea/misc.xml b/Kelompok/.idea/misc.xml
+--- a/Kelompok/.idea/misc.xml	(revision d088581911821a9e22246e9ede897e3c38408100)
++++ b/Kelompok/.idea/misc.xml	(date 1631088126528)
+@@ -1,5 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="DesignSurface">
++    <option name="filePathToZoomLevelMap">
++      <map>
++        <entry key="..\:/Users/Dani/AndroidStudioProjects/kelompokppb1/Kelompok/app/src/main/res/layout/activity_main2.xml" value="0.22447916666666667" />
++      </map>
++    </option>
++  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+Index: Kelompok/.idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Kelompok/.idea/deploymentTargetDropDown.xml b/Kelompok/.idea/deploymentTargetDropDown.xml
+new file mode 100644
+--- /dev/null	(date 1631089514825)
++++ b/Kelompok/.idea/deploymentTargetDropDown.xml	(date 1631089514825)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="deploymentTargetDropDown">
++    <runningDeviceTargetSelectedWithDropDown>
++      <Target>
++        <type value="RUNNING_DEVICE_TARGET" />
++        <deviceKey>
++          <Key>
++            <type value="SERIAL_NUMBER" />
++            <value value="1c5884bf" />
++          </Key>
++        </deviceKey>
++      </Target>
++    </runningDeviceTargetSelectedWithDropDown>
++    <timeTargetWasSelectedWithDropDown value="2021-09-08T08:19:13.276193700Z" />
++  </component>
++</project>
+\ No newline at end of file
